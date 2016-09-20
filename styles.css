@@ -1,0 +1,142 @@
+@charset "UTF-8";
+@import "https://fonts.googleapis.com/css?family=Dosis:200,400|Neuton:300";
+
+body {
+	background-color: black;
+}
+
+h1 {
+	font-family: 'Dosis', sans-serif;
+	letter-spacing: 5px;
+	font-weight: 200;
+	font-size: 37px;
+	color: white;
+
+	text-align: center;
+	position: relative;
+	top: 120px;
+	left: 5px;
+}
+
+h2 {
+	font-family: 'Dosis', sans-serif;
+	color: white;
+	letter-spacing: 2px;
+	font-weight: 200;
+	font-size: 25px;
+	font-style: italic;
+
+	text-align: center;
+	position: relative;
+	top: 465px;	
+	left: 0px;
+}
+
+footer {
+	height: 100px;
+}
+
+#wrapper {
+	display: block;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#tray {
+	margin-top: -106px;
+}
+
+#token {
+	position: absolute;
+	top: 10px;
+	z-index: -1;
+}
+
+#article_wrap {
+	display: block;
+	width: 640px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#title {
+	font-family: 'Dosis', serif;
+	letter-spacing: 5px;
+	font-weight: 200;
+	font-size: 37px;
+	font-style: italic;
+	color: white;
+
+	margin-top: 240px;
+	margin-left: 310px;
+	margin-bottom: 160px;
+}
+
+#essay {
+	text-align: justify;
+	color: white;
+	font-family: 'Neuton', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+/* inner workings of gallery */
+
+dl#gallery-container { 
+  position: relative;
+  width: 540px;
+  height: 560px;
+
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+dl#gallery-container dt{
+  position: relative;
+  left: 26%;
+
+  display: inline;
+  cursor: pointer;
+}
+
+dl#gallery-container dt:hover+dd, dl#gallery-container dt:focus+dd { 
+  opacity:1;
+}
+
+dl#gallery-container dd { 
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -45%);
+
+  opacity: 0;
+  transition: .5s opacity;
+}
+
+dl#gallery-container dt span:hover {
+	background-color: #fff;
+}
+
+dl#gallery-container dt span {
+	height: 15px;
+	width: 15px;
+
+	cursor: pointer;
+
+	background-color: transparent;
+	border: 2px solid;
+
+	transition: 
+	background-color .3s, color .15s, box-shadow .3s, opacity .3s;
+	border-radius: 50%;
+	color: #fff;
+	display: inline-block;
+	box-sizing: border-box;
+
+}
+

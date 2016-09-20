@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gus' Portfolio</title>
+  <link href="styles.css" rel="stylesheet" type="text/css"> 
+</head>
+
+<body>
+<!-- pre-load images for mouseover effect -->
+  	<link rel="preload" as="image" href="assets/topLeft.jpg">
+  	<link rel="preload" as="image" href="assets/topMiddle.jpg">
+  	<link rel="preload" as="image" href="assets/topRight.jpg">
+  	<link rel="preload" as="image" href="assets/bottomLeft.jpg">
+  	<link rel="preload" as="image" href="assets/bottomMiddle.jpg">
+  	<link rel="preload" as="image" href="assets/bottomRight.jpg">
+
+<!-- flip image on mouseover -->
+  	<script type="text/javascript">
+	function topLeft(){
+		document.tray.src = 'assets/topLeft.jpg';return true;
+	}
+	function topMiddle(){
+		document.tray.src = 'assets/topMiddle.jpg';return true;
+	}
+	function topRight(){
+		document.tray.src = 'assets/topRight.jpg';return true;
+	}
+	function bottomLeft(){
+		document.tray.src = 'assets/bottomLeft.jpg';return true;
+	}
+	function bottomMiddle(){
+		document.tray.src = 'assets/bottomMiddle.jpg';return true;
+	}
+	function bottomRight(){
+		document.tray.src = 'assets/bottomRight.jpg';return true;
+	}
+	</script>
+
+<!--flip subtitle on mouseover-->
+  	<script type="text/javascript">
+	function topLeftSub(){
+		document.getElementById('subtitle').innerHTML = "filmmaker";
+	}
+	function topMiddleSub(){
+		document.getElementById('subtitle').innerHTML = "graphic designer";
+	}
+	function topRightSub(){
+		document.getElementById('subtitle').innerHTML = "writer";
+	}
+	function bottomLeftSub(){
+		document.getElementById('subtitle').innerHTML = "chef";
+	}
+	function bottomMiddleSub(){
+		document.getElementById('subtitle').innerHTML = "mensch";
+	}
+	function bottomRightSub(){
+		document.getElementById('subtitle').innerHTML = "laika employee";
+	}
+	</script>
+
+  	<div id="wrapper">
+
+	<h1>Gus Nordhielm, aspiring</h1>
+
+	<h2 id="subtitle">...</h2>
+
+	<map name="traymap">
+    	<area alt="spotlight on a tiny model DSLR" href="filmmaker.html" onmouseover="topLeft(),topLeftSub()" shape="poly" coords="210,241,394,244,386,333,195,332" />
+    	<area alt="spotlight on a collection of typesetting letters" href="designer.html" onmouseover="topMiddle(),topMiddleSub()" shape="poly" coords="406,243,588,243,593,333,400,335" />
+    	<area alt="spotlight on a brad-bound screenplay" href="writer.html" onmouseover="topRight(),topRightSub()" shape="poly" coords="602,242,655,242,662,234,670,235,708,233,741,227,742,243,782,242,797,330,604,334" />
+    	<area alt="spotlight on a little cast-iron pan" href="chef.html" onmouseover="bottomLeft(),bottomLeftSub()" shape="poly" coords="179,443,194,345,214,345,222,336,237,336,254,343,385,344,379,446" />
+    	<area alt="spotlight on a model pair of tattered shoes" href="alinea.html" onmouseover="bottomMiddle(),bottomMiddleSub()" shape="poly" coords="398,343,595,343,598,445,392,444" />
+    	<area alt="spotlight on a model of the bottom half of a face" href="laika.html" onmouseover="bottomRight(),bottomRightSub()" shape="poly" coords="606,344,798,342,811,438,610,444" />
+	</map>
+
+  	<img name="tray" id="tray" src="assets/blank.jpg" alt="a foam-core tray, with many small compartments" width="1000" height="666" usemap="#traymap">
+
+	</div>
+
+</body>
+</html>
