@@ -5,9 +5,14 @@
   <meta charset="utf-8">
   <title>Gus' Portfolio</title>
   <link href="styles.css" rel="stylesheet" type="text/css"> 
-
+  <link rel="preload" as="image" href="assets/topLeft.jpg">
+  <link rel="preload" as="image" href="assets/topMiddle.jpg">
+  <link rel="preload" as="image" href="assets/topRight.jpg">
+  <link rel="preload" as="image" href="assets/bottomLeft.jpg">
+  <link rel="preload" as="image" href="assets/bottomMiddle.jpg">
+  <link rel="preload" as="image" href="assets/bottomRight.jpg">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  	<script>
+  <script>
   	$(document).ready(function() {
   	$("#hover-zones").on('mouseover', 'area', function() {
     $("#container img").removeClass("opaque");
@@ -20,20 +25,30 @@
     $(this).addClass("selected");
   	});
 	});
-  	</script>
-
+  </script>
+  <script type="text/javascript">
+	function topLeftSub(){
+ 	document.getElementById('subtitle').innerHTML = "filmmaker";
+ 	}
+ 	function topMiddleSub(){
+ 	document.getElementById('subtitle').innerHTML = "graphic designer";
+ 	}
+ 	function topRightSub(){
+ 	document.getElementById('subtitle').innerHTML = "writer";
+ 	}
+ 	function bottomLeftSub(){
+ 	document.getElementById('subtitle').innerHTML = "chef";
+ 	}
+ 	function bottomMiddleSub(){
+ 	document.getElementById('subtitle').innerHTML = "mensch";
+ 	}
+ 	function bottomRightSub(){
+ 	document.getElementById('subtitle').innerHTML = "laika employee";
+ 	}
+  </script>
 </head>
-
 <body>
-<!-- pre-load images for mouseover effect -->
-  	<link rel="preload" as="image" href="assets/topLeft.jpg">
-  	<link rel="preload" as="image" href="assets/topMiddle.jpg">
-  	<link rel="preload" as="image" href="assets/topRight.jpg">
-  	<link rel="preload" as="image" href="assets/bottomLeft.jpg">
-  	<link rel="preload" as="image" href="assets/bottomMiddle.jpg">
-  	<link rel="preload" as="image" href="assets/bottomRight.jpg">
-
-  	<div id="wrapper" class="index">
+<div id="wrapper" class="index">
 
 	<h1>Gus Nordhielm, aspiring</h1>
 
@@ -42,12 +57,12 @@
  	<img id="tray" src="assets/blank@640.jpg" alt="a foam-core tray, with many small compartments" width="640" height="auto" usemap="#traymap">
 
   	<map name="traymap" id="hover-zones">
-    	<area class="active" alt="spotlight on a tiny model DSLR" href="filmmaker.html" shape="poly" coords="24,192, 219,193, 212,293, 7,293" />
-    	<area alt="spotlight on a collection of typesetting letters" href="designer.html" shape="poly" coords="219,193, 414,193, 420,293, 212,293" />
-    	<area alt="spotlight on a brad-bound screenplay" href="writer.html" shape="poly" coords="414,193, 606,193, 625,293, 420,293" />
-    	<area alt="spotlight on a little cast-iron pan" href="chef.html" shape="poly" coords="7,293, 212,293, 204,405, 1,405" />
-    	<area alt="spotlight on a model pair of tattered shoes" href="alinea.html" shape="poly" coords="212,293, 420,293, 422,405, 204,405" />
-    	<area alt="spotlight on a model of the bottom half of a face" href="laika.html" shape="poly" coords="420,293, 625,293, 636,405, 422,405" />
+    	<area class="active" onmouseover="setTimeout(topLeftSub,250);" alt="spotlight on a tiny model DSLR" href="filmmaker.html" shape="poly" coords="24,192, 219,193, 212,293, 7,293" />
+    	<area onmouseover="setTimeout(topMiddleSub,250);" alt="spotlight on a collection of typesetting letters" href="designer.html" shape="poly" coords="219,193, 414,193, 420,293, 212,293" />
+    	<area onmouseover="setTimeout(topRightSub,250);" alt="spotlight on a brad-bound screenplay" href="writer.html" shape="poly" coords="414,193, 606,193, 625,293, 420,293" />
+    	<area onmouseover="setTimeout(bottomLeftSub,250);" alt="spotlight on a little cast-iron pan" href="chef.html" shape="poly" coords="7,293, 212,293, 204,405, 1,405" />
+    	<area onmouseover="setTimeout(bottomMiddleSub,250);" alt="spotlight on a model pair of tattered shoes" href="alinea.html" shape="poly" coords="212,293, 420,293, 422,405, 204,405" />
+    	<area onmouseover="setTimeout(bottomRightSub,250);" alt="spotlight on a model of the bottom half of a face" href="laika.html" shape="poly" coords="420,293, 625,293, 636,405, 422,405" />
 	</map>
 
 	<div id="container" >		
@@ -59,7 +74,7 @@
 		<img id="bottomRight" src="assets/bottomRightLQ.jpg">
 	</div>
 
- 	<img id="background" src="assets/blank.jpg" >
+ 	<img id="background" src="assets/blankLQ.jpg" >
 
 </div>
 </body>
