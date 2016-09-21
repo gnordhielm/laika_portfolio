@@ -14,7 +14,7 @@ h1 {
 
 	text-align: center;
 	position: relative;
-	top: 120px;
+	top: 95px;
 	left: 5px;
 }
 
@@ -28,23 +28,48 @@ h2 {
 
 	text-align: center;
 	position: relative;
-	top: 465px;	
-	left: 0px;
-}
-
-footer {
-	height: 100px;
+	top: 420px;	
+	left: -5px;
 }
 
 #wrapper {
 	display: block;
-	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+
+	overflow: hidden;
+
+	min-width: 640px;
+	max-width: 1000px;
+
+}
+
+#tray {
+	opacity: 0;
+
+	display: block;
+	margin-top: -106px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#tray {
-	margin-top: -106px;
+#image-container {
+	z-index: -1;
+
+	position: relative;
+	top: -649px;
+	left: 50%;
+  	margin-right: 50%;
+  	transform: translateX(-499px); 
+}
+
+#image-container img {
+	width: 1000px;
+	height: auto;
+	position: absolute;
+
+	opacity: 0;
+	transition: .5s opacity;
 }
 
 #token {
@@ -55,7 +80,7 @@ footer {
 
 #article_wrap {
 	display: block;
-	width: 640px;
+	width: 500px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -67,10 +92,42 @@ footer {
 	font-size: 37px;
 	font-style: italic;
 	color: white;
+}
 
+#title.designer {
 	margin-top: 240px;
-	margin-left: 310px;
+	margin-left:490px;
+	margin-bottom: 100px;
+}
+
+#title.filmmaker {
+	margin-top: 253px;
+	margin-left: 490px;
+	margin-bottom: 150px;
+}
+
+#title.writer {
+	margin-top: 253px;
+	margin-left: 370px;
+	margin-bottom: 150px;
+}
+
+#title.chef {
+	margin-top: 250px;
+	margin-left:350px;
 	margin-bottom: 160px;
+}
+
+#title.alinea {
+	margin-top: 260px;
+	margin-left: 490px;
+	margin-bottom: 150px;
+}
+
+#title.laika {
+	margin-top: 250px;
+	margin-left: 290px;
+	margin-bottom: 150px;
 }
 
 #essay {
@@ -82,7 +139,15 @@ footer {
 	line-height: 18px;
 }
 
-/* inner workings of gallery */
+#back-button {
+	position: relative;
+	left: -180px;
+}
+
+
+
+
+/* inner workings of gallery 
 
 dl#gallery-container { 
   position: relative;
@@ -138,5 +203,5 @@ dl#gallery-container dt span {
 	display: inline-block;
 	box-sizing: border-box;
 
-}
+}   */
 

@@ -16,7 +16,18 @@
   	<link rel="preload" as="image" href="assets/bottomMiddle.jpg">
   	<link rel="preload" as="image" href="assets/bottomRight.jpg">
 
-<!-- flip image on mouseover -->
+<!-- image+subtitle mouseover effect -->
+	<script type="text/javascript">
+		function showImg (id) {
+			document.getElementById(id).style.opacity = "1";
+		}
+		function hideImg (id) {
+			document.getElementById(id).style.opacity = "0";
+			document.getElementById(id).style.transition = ".5s opacity";
+		}
+	</script>
+
+<!-- flip image on mouseover
   	<script type="text/javascript">
 	function topLeft(){
 		document.tray.src = 'assets/topLeft.jpg';return true;
@@ -37,8 +48,7 @@
 		document.tray.src = 'assets/bottomRight.jpg';return true;
 	}
 	</script>
-
-<!--flip subtitle on mouseover-->
+flip subtitle on mouseover
   	<script type="text/javascript">
 	function topLeftSub(){
 		document.getElementById('subtitle').innerHTML = "filmmaker";
@@ -58,26 +68,47 @@
 	function bottomRightSub(){
 		document.getElementById('subtitle').innerHTML = "laika employee";
 	}
-	</script>
+	</script> -->
 
-  	<div id="wrapper">
+  	<div id="wrapper" class="index">
 
 	<h1>Gus Nordhielm, aspiring</h1>
 
 	<h2 id="subtitle">...</h2>
 
-	<map name="traymap">
-    	<area alt="spotlight on a tiny model DSLR" href="filmmaker.html" onmouseover="topLeft(),topLeftSub()" shape="poly" coords="210,241,394,244,386,333,195,332" />
-    	<area alt="spotlight on a collection of typesetting letters" href="designer.html" onmouseover="topMiddle(),topMiddleSub()" shape="poly" coords="406,243,588,243,593,333,400,335" />
-    	<area alt="spotlight on a brad-bound screenplay" href="writer.html" onmouseover="topRight(),topRightSub()" shape="poly" coords="602,242,655,242,662,234,670,235,708,233,741,227,742,243,782,242,797,330,604,334" />
-    	<area alt="spotlight on a little cast-iron pan" href="chef.html" onmouseover="bottomLeft(),bottomLeftSub()" shape="poly" coords="179,443,194,345,214,345,222,336,237,336,254,343,385,344,379,446" />
-    	<area alt="spotlight on a model pair of tattered shoes" href="alinea.html" onmouseover="bottomMiddle(),bottomMiddleSub()" shape="poly" coords="398,343,595,343,598,445,392,444" />
-    	<area alt="spotlight on a model of the bottom half of a face" href="laika.html" onmouseover="bottomRight(),bottomRightSub()" shape="poly" coords="606,344,798,342,811,438,610,444" />
+	<!-- original code <map name="traymap">
+    	<area tabindex="1" alt="spotlight on a tiny model DSLR" href="filmmaker.html" onmouseover="topLeft(),topLeftSub()" shape="poly" coords="210,241,394,244,386,333,195,332" />
+    	<area tabindex="2" alt="spotlight on a collection of typesetting letters" href="designer.html" onmouseover="topMiddle(),topMiddleSub()" shape="poly" coords="406,243,588,243,593,333,400,335" />
+    	<area tabindex="3" alt="spotlight on a brad-bound screenplay" href="writer.html" onmouseover="topRight(),topRightSub()" shape="poly" coords="602,242,655,242,662,234,670,235,708,233,741,227,742,243,782,242,797,330,604,334" />
+    	<area tabindex="4" alt="spotlight on a little cast-iron pan" href="chef.html" onmouseover="bottomLeft(),bottomLeftSub()" shape="poly" coords="179,443,194,345,214,345,222,336,237,336,254,343,385,344,379,446" />
+    	<area tabindex="5" alt="spotlight on a model pair of tattered shoes" href="alinea.html" onmouseover="bottomMiddle(),bottomMiddleSub()" shape="poly" coords="398,343,595,343,598,445,392,444" />
+    	<area tabindex="6" alt="spotlight on a model of the bottom half of a face" href="laika.html" onmouseover="bottomRight(),bottomRightSub()" shape="poly" coords="606,344,798,342,811,438,610,444" />
 	</map>
 
-  	<img name="tray" id="tray" src="assets/blank.jpg" alt="a foam-core tray, with many small compartments" width="1000" height="666" usemap="#traymap">
+  	<img name="tray" id="tray" src="assets/blank.jpg" alt="a foam-core tray, with many small compartments" width="1000" height="666" usemap="#traymap"> -->
 
+ 	<img id="tray" src="assets/blank@640.jpg" alt="a foam-core tray, with many small compartments" width="640" height="auto" usemap="#traymap">
+
+  	<map name="traymap">
+    	<area tabindex="1" alt="spotlight on a tiny model DSLR" href="filmmaker.html" onmouseover="showImg('topLeft')" onmouseout="hideImg('topLeft')" shape="poly" coords="24,192, 219,193, 212,293, 7,293" />
+    	<area tabindex="2" alt="spotlight on a collection of typesetting letters" href="designer.html" onmouseover="showImg('topMiddle')" onmouseout="hideImg('topMiddle')" shape="poly" coords="219,193, 414,193, 420,293, 212,293" />
+    	<area tabindex="3" alt="spotlight on a brad-bound screenplay" href="writer.html" onmouseover="showImg('topRight')" onmouseout="hideImg('topRight')" shape="poly" coords="414,193, 606,193, 625,293, 420,293" />
+    	<area tabindex="4" alt="spotlight on a little cast-iron pan" href="chef.html" onmouseover="showImg('bottomLeft')" onmouseout="hideImg('bottomLeft')" shape="poly" coords="7,293, 212,293, 204,405, 1,405" />
+    	<area tabindex="5" alt="spotlight on a model pair of tattered shoes" href="alinea.html" onmouseover="showImg('bottomMiddle')" onmouseout="hideImg('bottomMiddle')" shape="poly" coords="212,293, 420,293, 422,405, 204,405" />
+    	<area tabindex="6" alt="spotlight on a model of the bottom half of a face" href="laika.html" onmouseover="showImg('bottomRight')" onmouseout="hideImg('bottomRight')" shape="poly" coords="420,293, 625,293, 636,405, 422,405" />
+	</map>
+
+	<div id="image-container" >
+		<img style="opacity:1;" src="assets/blank.jpg" >
+		
+		<img id="topLeft" src="assets/topLeft.jpg">
+		<img id="topMiddle" src="assets/topMiddle.jpg">
+		<img id="topRight" src="assets/topRight.jpg">
+		<img id="bottomLeft" src="assets/bottomLeft.jpg">
+		<img id="bottomMiddle" src="assets/bottomMiddle.jpg">
+		<img id="bottomRight" src="assets/bottomRight.jpg">
 	</div>
 
+</div>
 </body>
 </html>
