@@ -53,7 +53,19 @@ h2 {
 	margin-right: auto;
 }
 
-#image-container {
+#background {
+	z-index: -2;
+	width: 1000px;
+	height: auto;
+
+	position: relative;
+	top: -649px;
+	left: 50%;
+  	margin-right: 50%;
+  	transform: translateX(-499px);
+}
+
+#container {
 	z-index: -1;
 
 	position: relative;
@@ -63,13 +75,19 @@ h2 {
   	transform: translateX(-499px); 
 }
 
-#image-container img {
+#container img {
 	width: 1000px;
 	height: auto;
 	position: absolute;
 
+	transition: opacity .6s ease-in-out;
 	opacity: 0;
-	transition: .5s opacity;
+	filter: alpha(opacity=0);
+}
+
+#container img.opaque {
+	opacity: 1;
+	filter: alpha(opacity=1);
 }
 
 #token {
