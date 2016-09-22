@@ -44,6 +44,10 @@ h2 {
 
 }
 
+#wrapper.article {
+	position: relative;
+}
+
 #tray {
 	opacity: 0;
 
@@ -59,11 +63,104 @@ h2 {
 	height: auto;
 
 	position: relative;
-	top: -649px;
 	left: 50%;
   	margin-right: 50%;
   	transform: translateX(-499px);
 }
+
+#background.index {
+	top: -649px;
+}
+
+#background.article {
+	position: absolute;
+}
+
+#background.article img {
+	width: 1000px;
+	height: auto;
+}
+
+/* article content defs */
+
+#content {
+	display: block;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#title {
+	font-family: 'Dosis', serif;
+	letter-spacing: 5px;
+	font-weight: 200;
+	font-size: 37px;
+	font-style: italic;
+	color: white;
+}
+
+#essay {
+	text-align: justify;
+	color: white;
+	font-family: 'Neuton', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+#highlight {}
+
+#gallery {}
+
+#gallery.filmmaker {
+	padding: 5px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 30px;
+
+	width: 250px;
+	height: 90px;
+
+	text-align: justify;
+	color: white;
+	font-family: 'Neuton', sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 13px;
+}
+
+#gallery.filmmaker p {
+	margin-top: -1px;
+}
+
+#gallery.filmmaker:nth-child(odd) img{
+	margin-right: 7px;
+	height: 91px;
+	float: left;
+}
+
+#gallery.filmmaker:nth-child(even) img{
+	margin-left: 7px;
+	height: 91px;
+	float: right;
+}
+
+#back {
+	padding-top: 20px;
+	padding-bottom: 70px;
+}
+
+#back img {
+	width: 500px;
+}
+
+#light {
+	transition: opacity .4s ease-in-out;
+	opacity: 0;
+}
+
+/* index hover effect */
 
 #container {
 	z-index: -1;
@@ -90,28 +187,7 @@ h2 {
 	filter: alpha(opacity=1);
 }
 
-#token {
-	position: absolute;
-	top: 10px;
-	z-index: -1;
-}
-
-#article_wrap {
-	display: block;
-	width: 500px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#title {
-	font-family: 'Dosis', serif;
-	letter-spacing: 5px;
-	font-weight: 200;
-	font-size: 37px;
-	font-style: italic;
-	color: white;
-}
-
+/*
 #title.designer {
 	margin-top: 240px;
 	margin-left:490px;
@@ -147,22 +223,7 @@ h2 {
 	margin-left: 290px;
 	margin-bottom: 150px;
 }
-
-#essay {
-	text-align: justify;
-	color: white;
-	font-family: 'Neuton', sans-serif;
-	font-weight: 300;
-	font-size: 16px;
-	line-height: 18px;
-}
-
-#back-button {
-	position: relative;
-	left: -180px;
-}
-
-
+*/
 
 
 /* inner workings of gallery 

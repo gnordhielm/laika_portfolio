@@ -14,7 +14,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>
   	$(document).ready(function() {
-  	$("#hover-zones").on('mouseover', 'area', function() {
+  	$("#hoverzones").on('mouseover', 'area', function() {
     $("#container img").removeClass("opaque");
 
     var newImage = $(this).index();
@@ -56,8 +56,8 @@
 
  	<img id="tray" src="assets/blank@640.jpg" alt="a foam-core tray, with many small compartments" width="640" height="auto" usemap="#traymap">
 
-  	<map name="traymap" id="hover-zones">
-    	<area class="active" onmouseover="setTimeout(topLeftSub,250);" alt="spotlight on a tiny model DSLR" href="filmmaker.html" shape="poly" coords="24,192, 219,193, 212,293, 7,293" />
+  <map name="traymap" id="hoverzones">
+    	<area onmouseover="setTimeout(topLeftSub,250);" alt="spotlight on a tiny model DSLR" href="filmmaker.html" shape="poly" coords="24,192, 219,193, 212,293, 7,293" />
     	<area onmouseover="setTimeout(topMiddleSub,250);" alt="spotlight on a collection of typesetting letters" href="designer.html" shape="poly" coords="219,193, 414,193, 420,293, 212,293" />
     	<area onmouseover="setTimeout(topRightSub,250);" alt="spotlight on a brad-bound screenplay" href="writer.html" shape="poly" coords="414,193, 606,193, 625,293, 420,293" />
     	<area onmouseover="setTimeout(bottomLeftSub,250);" alt="spotlight on a little cast-iron pan" href="chef.html" shape="poly" coords="7,293, 212,293, 204,405, 1,405" />
@@ -74,7 +74,7 @@
 		<img id="bottomRight" src="assets/bottomRightLQ.jpg">
 	</div>
 
- 	<img id="background" src="assets/blankLQ.jpg" >
+ 	<img id="background" class="index" src="assets/blankLQ.jpg" >
 
 </div>
 </body>
