@@ -13,14 +13,37 @@
   document.getElementById('light').style.opacity = "0";
   }
   </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+    $("#buttons").on('mouseover', 'area', function() {
+    $("#gallery img").removeClass("opaque");
+
+    var newImageG = $(this).index();
+
+    $("#gallery img").eq(newImageG).addClass("opaque");
+
+    $("#buttonoverlays img").removeClass("opaque");
+
+    var newImageB = $(this).index();
+
+    $("#buttonoverlays img").eq(newImageB).addClass("opaque");
+
+    $("#buttons area").removeClass("selected");
+    $(this).addClass("selected");
+    });
+  });
+  </script>  
+  
 </head>
 <body>
 
 <div id="wrapper" class="article">
    
   <div id="background" class="article">   
-    <img src="assets/designer-head.jpg" style="margin-top:-110px;margin-bottom:900px;">
-    <img id="light" src="assets/designer-back.jpg"> 
+    <img src="assets/designer-head.jpg" style="margin-top:-110px;margin-bottom:0px;">
+    <img src="assets/designer-gallery.jpg" style="margin-top:350px;"> 
+    <img id="light" src="assets/designer-back.png" style="margin-top:-170px;"> 
   </div> 
 
   <div id="content" >   
@@ -35,40 +58,46 @@
   <p id="essay">
   Later, I learned that they had also used the video in order to get a large grant from the michigan council for the arts. Bridget told me they had boasted their support of “local artists”. I have to admit I was quite flattered to know that to someone, somewhere, I was unquestionably an artist.
   </p>
-  <br>
+
+  <img id="designer-gallery-map" src="assets/designer-gallery-map.jpg" usemap="#buttonmap">
+
+  <map name="buttonmap" id="buttons" class="designer">
+    <area alt="" shape="poly" coords="75,41,81,39,88,41,86,50,83,55,76,56,70,52,73,43" />
+    <area alt="" shape="poly" coords="122,57,116,54,113,52,113,41,120,35,128,40,130,52" />
+    <area alt="" shape="poly" coords="157,37,162,34,171,38,173,50,166,55,160,55,154,52,153,43" />
+    <area alt="" shape="poly" coords="210,51,201,51,198,43,201,32,213,28,217,40,215,50" />
+    <area alt="" shape="poly" coords="244,28,254,28,260,36,260,46,250,50,240,48,240,32" />
+    <area alt="" shape="poly" coords="291,31,299,34,303,40,300,48,289,52,283,44,287,34" />
+    <area alt="" shape="poly" coords="332,30,340,28,349,35,343,45,336,47,328,41,328,32" />
+    <area alt="" shape="poly" coords="390,26,394,32,396,44,388,50,377,43,380,29" />
+    <area alt="" shape="poly" coords="427,26,435,30,434,44,424,50,416,44,418,28" />
+  </map>
+
+  <div id="buttonoverlays" class="designer">
+    <img src="assets/designer_gallery/1.png">
+    <img src="assets/designer_gallery/2.png">
+    <img src="assets/designer_gallery/3.png">
+    <img src="assets/designer_gallery/4.png">
+    <img src="assets/designer_gallery/5.png">
+    <img src="assets/designer_gallery/6.png">
+    <img src="assets/designer_gallery/7.png">
+    <img src="assets/designer_gallery/8.png">
+    <img src="assets/designer_gallery/9.png">
+  </div>
+
+  <div id="gallery" class="designer">
+    <img src="assets/designer_gallery/charliebrown.jpg">
+    <img src="assets/designer_gallery/ccc.jpg">
+    <img src="assets/designer_gallery/intothewoods.jpg">
+    <img src="assets/designer_gallery/urinetown.jpg">
+    <img src="assets/designer_gallery/completeworks.jpg">
+    <img src="assets/designer_gallery/landlocked.jpg">
+    <img src="assets/designer_gallery/birdofpassage.jpg">
+    <img src="assets/designer_gallery/voodoo.jpg">
+    <img src="assets/designer_gallery/toomuchlight.jpg">
+  </div>
   
-  <dl id="gallery-container">  
-     
-     <dt><span></span></dt>
-     <dd><img src="assets/designer_gallery/urinetown.jpg" width="350" alt="Urinetown poster"></dd>
-     
-     <dt><span></span></dt> 
-     <dd><img src="assets/designer_gallery/completeworks.jpg" width="350" alt="The complete works of william shakespeare poster"></dd>
-
-     <dt><span></span></dt>
-     <dd><img class="slide" src="assets/designer_gallery/intothewoods.jpg" width="350" alt="Into the woods poster"></dd>
-     
-     <dt><span></span></dt>
-     <dd><img class="slide" src="assets/designer_gallery/charliebrown.jpg" width="350" alt="Charlie brown poster"></dd>
-
-     <dt><span></span></dt>      
-     <dd><img class="slide" src="assets/designer_gallery/ccc.jpg" width="350" alt="Caucasian chalk circle poster"></dd>
-     
-     <dt><span></span></dt>      
-     <dd><img class="slide" src="assets/designer_gallery/birdofpassage.jpg" width="350" alt="Bird of passage poster"></dd>
-       
-     <dt><span></span></dt>
-     <dd><img class="slide" src="assets/designer_gallery/landlocked.jpg" width="350" alt="Landlocked poster"></dd>
-       
-     <dt><span></span></dt>
-       <dd><img class="slide" src="assets/designer_gallery/toomuchlight.jpg" width="350" alt="Too much light makes the baby go blind poster"></dd>
-       
-     <dt><span></span></dt>
-     <dd><img class="slide" src="assets/designer_gallery/voodoo.jpg" width="350" alt="Voodoo annual variety show poster"></dd>
-
-   </dl>
-  
-  <div id="back">
+  <div id="back" class="designer">
       <img src="assets/designer-back-map.png" width="640" height="auto" usemap="#backmap">
       <map name="backmap" >
         <area alt="" href="index.html" onmouseover="lightIn()" onmouseout="lightOut()" shape="poly" coords="275,54,276,62,307,71,308,62,329,57,329,46,325,38,304,39,298,32" />

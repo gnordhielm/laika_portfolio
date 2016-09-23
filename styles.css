@@ -146,8 +146,13 @@ h2 {
 	float: right;
 }
 
-#back {
+#back.filmmaker {
 	padding-top: 20px;
+	padding-bottom: 70px;
+}
+
+#back.designer {
+	padding-top: 70px;
 	padding-bottom: 70px;
 }
 
@@ -187,61 +192,50 @@ h2 {
 	filter: alpha(opacity=1);
 }
 
-/* inner workings of gallery 
+/* gallery effect */
 
-dl#gallery-container { 
-  position: relative;
-  width: 540px;
-  height: 560px;
-
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+#designer-gallery-map {
+	position: relative;
+	opacity: 0;
 }
 
-dl#gallery-container dt{
-  position: relative;
-  left: 26%;
+#gallery.designer {
+	z-index: -1;
+	position: relative;
+	top: -400px;
+	left: 100px;
+  }
 
-  display: inline;
-  cursor: pointer;
+#gallery.designer img {
+	width: 300px;
+	position: absolute;
+
+	transition: opacity .6s ease-in-out;
+	opacity: 0;
+	filter: alpha(opacity=0);
 }
 
-dl#gallery-container dt:hover+dd, dl#gallery-container dt:focus+dd { 
-  opacity:1;
+#gallery.designer img.opaque {
+	opacity: 1;
+	filter: alpha(opacity=1);
 }
 
-dl#gallery-container dd { 
-  position: absolute;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -45%);
-
-  opacity: 0;
-  transition: .5s opacity;
+#buttonoverlays {
+	z-index: -2;
+	position: relative;
+	top: -496px;
 }
 
-dl#gallery-container dt span:hover {
-	background-color: #fff;
+#buttonoverlays img {
+	width: 500px;
+	position: absolute;
+
+	opacity: 0;
+	filter: alpha(opacity=0);
 }
 
-dl#gallery-container dt span {
-	height: 15px;
-	width: 15px;
-
-	cursor: pointer;
-
-	background-color: transparent;
-	border: 2px solid;
-
-	transition: 
-	background-color .3s, color .15s, box-shadow .3s, opacity .3s;
-	border-radius: 50%;
-	color: #fff;
-	display: inline-block;
-	box-sizing: border-box;
-
-}   */
+#buttonoverlays img.opaque {
+	opacity: 1;
+	filter: alpha(opacity=1);
+}
 
