@@ -156,7 +156,7 @@ h2 {
 }
 
 #light {
-	transition: opacity .4s ease-in-out;
+	transition: opacity .3s ease-in-out;
 	opacity: 0;
 }
 
@@ -186,45 +186,6 @@ h2 {
 	opacity: 1;
 	filter: alpha(opacity=1);
 }
-
-/*
-#title.designer {
-	margin-top: 240px;
-	margin-left:490px;
-	margin-bottom: 100px;
-}
-
-#title.filmmaker {
-	margin-top: 253px;
-	margin-left: 490px;
-	margin-bottom: 150px;
-}
-
-#title.writer {
-	margin-top: 253px;
-	margin-left: 370px;
-	margin-bottom: 150px;
-}
-
-#title.chef {
-	margin-top: 250px;
-	margin-left:350px;
-	margin-bottom: 160px;
-}
-
-#title.alinea {
-	margin-top: 260px;
-	margin-left: 490px;
-	margin-bottom: 150px;
-}
-
-#title.laika {
-	margin-top: 250px;
-	margin-left: 290px;
-	margin-bottom: 150px;
-}
-*/
-
 
 /* inner workings of gallery 
 
