@@ -13,6 +13,27 @@
   document.getElementById('light').style.opacity = "0";
   }
   </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+    $("#buttons").on('mouseover', 'area', function() {
+    $("#gallery img").removeClass("opaque");
+
+    var newImageG = $(this).index();
+
+    $("#gallery img").eq(newImageG).addClass("opaque");
+
+    $("#buttonoverlays img").removeClass("opaque");
+
+    var newImageB = $(this).index();
+
+    $("#buttonoverlays img").eq(newImageB).addClass("opaque");
+
+    $("#buttons area").removeClass("selected");
+    $(this).addClass("selected");
+    });
+  });
+  </script> 
 </head>
 <body>
 
@@ -20,6 +41,7 @@
    
   <div id="background" class="article">   
     <img src="assets/alinea-head.jpg" style="margin-top:-80px;">
+    <img src="assets/alinea-gallery.jpg" style="margin-top:410px;"> 
     <img id="light" src="assets/alinea-back.jpg"> 
   </div> 
 
@@ -29,17 +51,33 @@
   <br><br>
   The deadline was only two weeks away. I’d say about two hours work amounted to fifteen seconds of video, here. I also had a full time job. As the two weeks came to a close, I was running on less and less sleep, and I experienced a strange warping of perspective. I was unsure about the quality of the video - unsure it was wise to promise to do something I had never done before. I wanted to make something better than what had followed. Appropriately, as the company had their sights set much higher for the coming season. I delivered it in time for their big fundraising gala, and was pleased, with a fresh perspective, to see the pennyseats, rather quickly, meet their fundraising goal.</p>
   <br>
-  <iframe width="500" height="281.25" src="https://www.youtube.com/embed/0Jrlai6SvyE?showinfo=0&controls=1&cc_load_policy=0" frameborder="0">
-  </iframe>
-  <br><br>
+  <img src="assets/cookbook.png" width="500" height="auto"> 
+  <br>
   <p id="essay">
   Later, I learned that they had also used the video in order to get a large grant from the michigan council for the arts. Bridget told me they had boasted their support of “local artists”. I have to admit I was quite flattered to know that to someone, somewhere, I was unquestionably an artist.
   </p>
   <br>
-  <p id="captions">
-  Later, I learned that they had also used the video in order to get a large grant from the michigan council for the arts. Bridget told me they had boasted their support of “local artists”. I have to admit I was quite flattered to know that to someone, somewhere, I was unquestionably an artist.
-  </p>
-      
+  
+  <img id="alinea-gallery-map" src="assets/alinea-gallery-map.jpg" usemap="#buttonmap">
+
+  <map name="buttonmap" id="buttons" class="alinea">
+    <area alt="" shape="poly" coords="210,31,218,40,219,57,205,60,195,56,197,36" />
+    <area alt="" shape="poly" coords="257,28,263,42,263,56,250,58,240,52,239,39,245,29" />
+    <area alt="" shape="poly" coords="298,54,292,51,292,42,294,32,304,29,311,31,315,46,310,52" />
+  </map>
+
+  <div id="buttonoverlays" class="alinea">
+    <img src="assets/alinea_gallery/1.png">
+    <img src="assets/alinea_gallery/2.png">
+    <img src="assets/alinea_gallery/3.png">
+
+  </div>
+
+  <div id="gallery" class="alinea">
+    <img src="assets/alinea_gallery/insta.jpg">
+    <img src="assets/alinea_gallery/email.jpeg">
+    <img src="assets/alinea_gallery/check.jpg">
+  </div>
   
     <div id="back">
       <img src="assets/alinea-back-map.png" width="640" height="auto" usemap="#backmap">

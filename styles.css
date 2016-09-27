@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "https://fonts.googleapis.com/css?family=Dosis:200,400|Neuton:300";
+@import "https://fonts.googleapis.com/css?family=Dosis:200,400|Neuton:300|VT323:400";
 
 body {
 	background-color: black;
@@ -42,6 +42,10 @@ h2 {
 	min-width: 640px;
 	max-width: 1000px;
 
+}
+
+#wrapper.index {
+	max-height: 800px;
 }
 
 #wrapper.article {
@@ -96,19 +100,87 @@ h2 {
 	font-weight: 200;
 	font-size: 37px;
 	font-style: italic;
-	color: white;
+	color: #F7F7F7;
 }
 
 #essay {
 	text-align: justify;
-	color: white;
+	color: #F7F7F7;
 	font-family: 'Neuton', sans-serif;
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 18px;
 }
 
-#highlight {}
+/* chef highlight "game" */
+
+#gameBackground {
+  z-index: -2;
+  position: absolute;
+  width: 500px;
+  height: auto;
+}
+
+#gameContent {
+  position: relative;
+  width: 500px;
+  height: 350px;
+}
+
+#gameContent p {
+  color: white;
+  text-align: center;
+  font-family: "VT323", monospace;
+}
+
+#gameContent #gameTitle {
+  font-size: 25px;
+}
+
+#gameContent #gameBody {
+  font-size: 16px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#gameContent #gameNav {
+  font-size: 16px;
+}
+
+@keyframes blinker {
+  79% {opacity: 1;}
+  80% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+#gameNav.blinking {
+  animation: blinker 1s linear infinite;
+}
+
+#gameLettersMap {
+	z-index: 1;
+	display: none;
+	position: absolute;
+	opacity: 0;
+}
+
+@keyframes fadeout {
+	50% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+#spritzLoad {
+	width: 500px;
+  	height: 350px;
+	z-index: 1;
+	display: none;
+	position: absolute;
+	animation: fadeout 3s ease-in-out .2s;
+
+}
+
+/*--------------------*/
+
 
 #gallery {}
 
@@ -152,6 +224,11 @@ h2 {
 }
 
 #back.designer {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+#back.chef {
 	padding-top: 70px;
 	padding-bottom: 70px;
 }
@@ -219,6 +296,60 @@ h2 {
 	opacity: 1;
 	filter: alpha(opacity=1);
 }
+
+#chef-gallery-map {
+	position: relative;
+	opacity: 0;
+}
+
+#gallery.chef {
+	z-index: -1;
+	position: relative;
+	top: -400px;
+	left: 100px;
+  }
+
+#gallery.chef img {
+	width: 300px;
+	position: absolute;
+
+	transition: opacity .6s ease-in-out;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+#gallery.chef img.opaque {
+	opacity: 1;
+	filter: alpha(opacity=1);
+}
+
+
+#alinea-gallery-map {
+	position: relative;
+	opacity: 0;
+}
+
+#gallery.alinea {
+	z-index: -1;
+	position: relative;
+	top: -400px;
+	left: 50px;
+  }
+
+#gallery.alinea img {
+	width: 400px;
+	position: absolute;
+
+	transition: opacity .6s ease-in-out;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+#gallery.alinea img.opaque {
+	opacity: 1;
+	filter: alpha(opacity=1);
+}
+
 
 #buttonoverlays {
 	z-index: -2;
