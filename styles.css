@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "https://fonts.googleapis.com/css?family=Dosis:200,400|Neuton:300|VT323:400";
+@import "https://fonts.googleapis.com/css?family=Dosis:200,400|VT323:400";
 
 body {
 	background-color: black;
@@ -106,9 +106,9 @@ h2 {
 #essay {
 	text-align: justify;
 	color: #F7F7F7;
-	font-family: 'Neuton', sans-serif;
-	font-weight: 300;
-	font-size: 16px;
+	font-family: 'Dosis', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
 	line-height: 18px;
 }
 
@@ -194,11 +194,10 @@ h2 {
 	width: 250px;
 	height: 90px;
 
-	text-align: justify;
 	color: white;
-	font-family: 'Neuton', sans-serif;
+	font-family: 'Dosis', sans-serif;
 	font-weight: 300;
-	font-size: 12px;
+	font-size: 11px;
 	line-height: 13px;
 }
 
