@@ -103,7 +103,7 @@ h2 {
 	color: #F7F7F7;
 }
 
-#essay {
+#essay, #caption {
 	text-align: justify;
 	color: #F7F7F7;
 	font-family: 'Dosis', sans-serif;

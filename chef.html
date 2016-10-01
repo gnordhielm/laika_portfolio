@@ -108,7 +108,7 @@
 
     document.getElementById('gameBackground').src = "assets/chef_gallery/game_blank_alt.jpg";
     document.getElementById('gameTitle').innerHTML = "";
-    document.getElementById('gameBody').innerHTML = "<br> As the letter instructs, you walk to the living room. Resting on a table is a tumbler holding a deep red spritz [Chianti, rhubarb syrup, seltzer]. The rim is lined with salt. <br><br> You get comfortable, sipping at your drink as you read the rest of the letter: an essay on the origin of the spritz. Taking you through the invention of Aperol and the founding of Italy, it lands finally in ancient Rome, where the spritz was invented. In homage to the Roman practice of dilluting their wine with sea water, you are presented a spritz with a rim of salt.";
+    document.getElementById('gameBody').innerHTML = "<br> As the letter instructs, you walk to the living room. Resting on a table is a tumbler holding a deep red spritz [Chianti, rhubarb syrup, seltzer]. The rim is lined with salt. <br><br> You get comfortable, sipping at your drink as you read the rest of the letter: an essay on the origin of the spritz. Taking you through the advent of Aperol and the founding of Italy, it lands finally in ancient Rome, where the spritz was invented. In homage to the Roman practice of dilluting their wine with sea water, you are presented a spritz with a rim of salt.";
   };
 
   var spritz5 = function () {
@@ -201,7 +201,7 @@
     currentScene = 11;
     document.getElementById('gameBackground').src = "assets/chef_gallery/game_soup.jpg";
     document.getElementById('gameTitle').innerHTML = "5: Chicken Soup";
-    document.getElementById('gameBody').innerHTML = "You are served a crystal-clear chicken consommé. In it sit three gelatinous spheres: spicy buttermilk, green herb tea, and black truffle. When you bite into each sphere, it explodes, transforming the broth that rode to your mouth with it.";
+    document.getElementById('gameBody').innerHTML = "You are served a crystal-clear chicken consommé. In it sit three gelatinous spheres: spicy buttermilk, green herb tea, and black truffle juice. When you bite into each sphere, it explodes, transforming the broth that rode to your mouth with it.";
   };
 
   var drawScene12 = function() {
@@ -215,7 +215,7 @@
     currentScene = 13;
     document.getElementById('gameBackground').src = "assets/chef_gallery/game_maeuntang.jpg";
     document.getElementById('gameTitle').innerHTML = "6: Maeuntang, Chilled";
-    document.getElementById('gameBody').innerHTML = "You are served a bowl of skate ceviche. The fish has been marinated in ginger, thai chili, and lime. It sits atop a zucchini puree, with pickled daikon noodles. A saucepan is set on the table. Warm water is introduced. The dry ice inside sublimates, releasing a vapor scented with eucalyptus.";
+    document.getElementById('gameBody').innerHTML = "You are served a bowl of skate ceviche. The fish has been marinated in ginger, thai chili, and lime. It sits atop a zucchini puree, with pickled daikon. A saucepan is set on the table. Warm water is introduced. The dry ice inside sublimates, releasing a vapor scented with eucalyptus.";
   };
 
   var drawScene14 = function() {
@@ -372,8 +372,6 @@
     else { if (currentScene == 27) {drawScene28();}
     else { if (currentScene == 28) {drawScene29();}
     else {drawEnd();}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
-
- 
   </script>  
 </head>
 <body>
@@ -381,19 +379,19 @@
 <div id="wrapper" class="article">
    
   <div id="background" class="article">   
-    <img src="assets/chef-head.jpg" style="margin-top:-70px;">
-    <img src="assets/chef-gallery.jpg" style="margin-top:588px;"> 
-    <img id="light" src="assets/chef-back.jpg"> 
+    <img src="assets/chef-head.jpg" alt="the clay-cast iron pan, isolated" style="margin-top:-70px;">
+    <img src="assets/chef-gallery.jpg" alt="three clay buttons" style="margin-top:350px;"> 
+    <img id="light" src="assets/chef-back.png" alt="a light cast under the back arrow" style="width:850px;margin-top:-236px;margin-left:74px;"> 
   </div> 
 
   <div id="content" >   
     <p id="title" style="margin-top:180px;margin-left:135px;margin-bottom:120px;">chef</p>
-  <p id="essay">
-  Grant Achatz (of Alinea in Chicago) has a dish called “Pheasant, Shallot, Cider, Burning Oak Leaves”. It’s a single bite encased in tempura batter, eaten directly off a small oak branch, smoldering leaves attached. As the stories go: some diners, upon encountering the smell of burning leaves, become suddenly very quiet. They take the bite - finding on their tongue the remaining, more corporeal sensations of a brisk autumn in their childhood - and burst into tears. These stories are great exaggerations, I’m sure, but they highlight the ambitions of the cuisine at Alinea: to invoke feeling, and to communicate palpable ideas. Alinea’s is a style of cooking sometimes dismissed as gimmicky or sterile, but to me and the rest of their fans, avant-garde cuisine is more expressive and invigorating than any other.
+  <p id="essay"> 
+  “Dinner 5.14.16” 2016
   <br><br>
-  My girlfriend, Nora, spent her first year of college in Italy. It was a nightmare. But, like any other, it ended; and with that in sight, I decided to put together a dinner in celebration of her return - a culmination of everything I had learned about cooking, and, if done right, a meditation on Nora’s experiences and identity. I had done something like this the year before, when she graduated high school, but my ambitions were set much higher for this dinner, and I was confident I had practiced and learned enough about cooking to match them. 
+  Grant Achatz (of Alinea in Chicago) has a dish called “Pheasant, Shallot, Cider, Burning Oak Leaves”. It’s a single bite encased in tempura batter, eaten directly off a small oak branch, smoldering leaves attached. By many accounts, the smell of the leaves brings up memories of autumn in the midwest, effectively seasoning the dish with emotion. Cheesy, I know, but this is the most exciting food, to me: it expresses palpable ideas and feelings.
   <br><br>
-  The process of actually creating the menu and recipes was extremely difficult. On the one hand, it was a writing process: involving lots of 3x5 cards, sprawling conjecture and brainstorming in my notebook, and lots of pensive walks in nature. On the other hand, it was a logistics nightmare: it’s very difficult for one person to serve upwards of ten courses to six people, so I had to do as much ahead as I possibly could. I began cooking four days before the meal, and when it was finally over, I heaved a sigh of relief that the promise of a big dinner had kept Nora from running off with some Italian guy. Alternately: she’s a decent person who loves me, too. Either way, I’m immensely proud of what I managed to pull off. 
+  My girlfriend, Nora, spent her first year of college in Italy. It was a nightmare. But, like any other, it ended; and with that in sight, I decided to put together a dinner in celebration of her return. The process of creating the menu was a writing process: involving lots of 3x5 cards, sprawling conjecture in my notebook, and pensive walks in nature. It was also a logistics nightmare: it’s very difficult for one person to serve upwards of ten courses to six people. The menu was conceived with room for several make-ahead components, so I began cooking four days before the meal. Below is my best shot at recreating it.
   </p>
   <br>
 
@@ -434,8 +432,8 @@
   <link rel="prefetch" href="assets/chef_gallery/game_bath.jpg">
   <link rel="prefetch" href="assets/chef_gallery/game_end.jpg">
 
-  <img id="spritzLoad" src="assets/chef_gallery/game_spritz1_load.jpg">
-  <img id="gameLettersMap" src="assets/chef_gallery/game_letters_map.jpg" usemap="gameLetters">
+  <img id="spritzLoad" alt="a cartoon of a cocktail in a glass, it fades after a moment" src="assets/chef_gallery/game_spritz1_load.jpg">
+  <img id="gameLettersMap" alt="six envelopes with different symbols" src="assets/chef_gallery/game_letters_map.jpg" usemap="#gameLetters">
   <map name="gameLetters">
     <area shape="poly" coords="84,122,214,108,220,162,90,176" onclick="spritz1()">
     <area shape="poly" coords="226,66,298,123,296,166,310,168,293,190,217,127,215,108,195,109,192,108" onclick="spritz2()">
@@ -445,7 +443,7 @@
     <area shape="poly" coords="280,225,298,271,418,219,397,171,390,171,324,200,320,229" onclick="spritz6()">
   </map>
 
-  <img id="gameBackground" src="assets/chef_gallery/game_blank.jpg">
+  <img id="gameBackground" alt="a brown frame over a black background" src="assets/chef_gallery/game_blank.jpg">
 
   <div id="gameContent" onclick="nextScene()">
     <br>
@@ -455,36 +453,38 @@
   </div>
  
   <br>
-  <p id="essay">
-  An intimate event like this is so helpful in scratching that culinary creative itch. The possibilities presented when you know every one of your diners, when you have them as a captive audience for an hour or two, are absolutely endless. The wonder of Alinea and other restaurants like it is that they reach people in this intimate way, though they have never met them before. The ultimate goal in this medium is to evoke truly universal ideas and feelings, that’s the skill the great Chefs have honed in on. Deliciousness should be a foregone conclusion. It’s 2016, we have MSG. Below are a few lesser, but still elaborate, cooking projects I’ve taken on in the past year or so.
+  <p id="caption">
+  Some photos are missing because the photographer was too eager to dig in, which I take as a compliment. The wonder of Alinea and other restaurants like it comes in their ability to reach people in such an intimate way, even though they have never met them before. The ultimate goal is to evoke universal ideas and feelings - that’s the skill the great Chefs have honed in on. Deliciousness should be a foregone conclusion. Below are a few lesser, but still elaborate, cooking projects I’ve taken on in the past year.
   </p>
 
-  <img id="chef-gallery-map" src="assets/chef-gallery-map.jpg" usemap="#buttonmap">
+  <img id="chef-gallery-map" alt="all of the buttons, depressed" src="assets/chef-gallery-map.jpg" usemap="#buttons" style="margin-top:-11px;">
 
-  <map name="buttonmap" id="buttons" class="chef">
-    <area alt="" shape="poly" coords="209,54,200,50,201,39,210,36,221,42,222,52" />
-    <area alt="" shape="poly" coords="245,34,254,34,259,46,248,54,240,51,239,35" />
-    <area alt="" shape="poly" coords="281,35,295,34,299,40,297,54,284,54,279,45" />
+  <map name="buttons" id="buttons" class="chef">
+    <area href="#" alt="" shape="poly" coords="209,54,200,50,201,39,210,36,221,42,222,52" />
+    <area href="#" alt="" shape="poly" coords="245,34,254,34,259,46,248,54,240,51,239,35" />
+    <area href="#" alt="" shape="poly" coords="281,35,295,34,299,40,297,54,284,54,279,45" />
   </map>
 
   <div id="buttonoverlays" class="chef">
-    <img src="assets/chef_gallery/1.png">
-    <img src="assets/chef_gallery/2.png">
-    <img src="assets/chef_gallery/3.png">
+    <img alt="the first button, depressed" src="assets/chef_gallery/1.png">
+    <img alt="the second button, depressed" src="assets/chef_gallery/2.png">
+    <img alt="the third button, depressed" src="assets/chef_gallery/3.png">
 
   </div>
 
   <div id="gallery" class="chef">
-    <img src="assets/chef_gallery/birthday.jpg">
-    <img src="assets/chef_gallery/straws.gif">
-    <img src="assets/chef_gallery/thanksgiving.jpg">
+    <img alt="a decadent cake dusted in cocoa" src="assets/chef_gallery/birthday.png">
+    <img alt="a cutting board lined with various mignardises" src="assets/chef_gallery/thanksgiving.png">
+    <img alt="a gif of a bubble tea straw being loaded with various gels and puddings" src="assets/chef_gallery/straws.gif">
   </div>
 
     <div id="back">
-      <img src="assets/chef-back-map.png" width="640" height="auto" usemap="#backmap">
+      <img src="assets/chef-back-map.png" alt="a clay back arrow" width="640" usemap="#backmap">
       <map name="backmap" >
         <area alt="" href="index.html" onmouseover="lightIn()" onmouseout="lightOut()" shape="poly" coords="294,24,298,32,316,34,322,48,314,56,300,56,297,68,271,54,270,42" />
       </map>
+      <br>
+      <br>
     </div>
 
   </div> 
