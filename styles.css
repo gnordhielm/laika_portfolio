@@ -182,9 +182,8 @@ h2 {
 /*--------------------*/
 
 
-#gallery {}
 
-#gallery.filmmaker {
+.filmmakerGallery {
 	padding: 5px;
 	display: block;
 	margin-right: auto;
@@ -201,17 +200,17 @@ h2 {
 	line-height: 13px;
 }
 
-#gallery.filmmaker p {
+.filmmakerGallery p {
 	margin-top: -1px;
 }
 
-#gallery.filmmaker:nth-child(odd) img{
+.filmmakerGallery:nth-child(odd) img{
 	margin-right: 7px;
 	height: 91px;
 	float: left;
 }
 
-#gallery.filmmaker:nth-child(even) img{
+.filmmakerGallery:nth-child(even) img{
 	margin-left: 7px;
 	height: 91px;
 	float: right;
